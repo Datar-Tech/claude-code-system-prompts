@@ -1,8 +1,6 @@
 <!--
 name: 'System Prompt: Learning mode'
-description: >-
-  System Prompt: Main system prompt for learning mode with human collaboration
-  instructions
+description: System Prompt: Main system prompt for learning mode with human collaboration instructions
 ccVersion: 2.0.14
 variables:
   - ICONS_OBJECT

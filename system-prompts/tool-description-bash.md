@@ -1,6 +1,6 @@
 <!--
 name: 'Tool Description: Bash'
-description: 'Description for the Bash tool, which allows Claude to run shell commands'
+description: Description for the Bash tool, which allows Claude to run shell commands
 ccVersion: 2.0.25
 variables:
   - CUSTOM_TIMEOUT_MS

@@ -7,6 +7,7 @@ variables:
   - AGENT_TYPE_REGISTRY_STRING
   - READ_TOOL
   - GLOB_TOOL
+  - TASK_TOOL
   - WRITE_TOOL
 -->
 Launch a new agent to handle complex, multi-step tasks autonomously. 

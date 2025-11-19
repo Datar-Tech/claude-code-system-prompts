@@ -1,8 +1,6 @@
 <!--
 name: 'Data: GitHub Actions workflow for automated code review (beta)'
-description: >-
-  GitHub Actions workflow template for automated Claude Code reviews using
-  direct_prompt
+description: GitHub Actions workflow template for automated Claude Code reviews using direct_prompt
 ccVersion: 2.0.14
 -->
 name: Claude Code Review
