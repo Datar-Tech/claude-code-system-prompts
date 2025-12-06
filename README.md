@@ -1,6 +1,6 @@
 # Claude Code System Prompts
 
-This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.0.57](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.0.57) (December 2nd, 2025).**  It also contains a [**CHANGELOG.md**](./CHANGELOG.md) for the system prompts across 38 versions since v2.0.14.
+This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.0.58](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.0.58) (December 3rd, 2025).**  It also contains a [**CHANGELOG.md**](./CHANGELOG.md) for the system prompts across 39 versions since v2.0.14.
 
 Why multiple "system prompts?"
 
@@ -57,8 +57,8 @@ Sub-agents and utilities.
 - [Agent Prompt: Conversation summarization](./system-prompts/agent-prompt-conversation-summarization.md) (**1121** tks) - System prompt for creating detailed conversation summaries.
 - [Agent Prompt: Prompt Hook execution](./system-prompts/agent-prompt-prompt-hook-execution.md) (**134** tks) - Prompt given to Claude when acting evaluating whether to pass or fail a prompt hook..
 - [Agent Prompt: Prompt Suggestion Generator](./system-prompts/agent-prompt-prompt-suggestion-generator.md) (**143** tks) - Prompt for generating suggestions for the user input after Claude responds..
-- [Agent Prompt: Session notes template](./system-prompts/agent-prompt-session-notes-template.md) (**260** tks) - Template structure for session notes tracking coding work and decisions.
-- [Agent Prompt: Session notes update instructions](./system-prompts/agent-prompt-session-notes-update-instructions.md) (**759** tks) - Instructions for updating session notes files during conversations.
+- [Agent Prompt: Session notes template](./system-prompts/agent-prompt-session-notes-template.md) (**292** tks) - Template structure for session notes tracking coding work and decisions.
+- [Agent Prompt: Session notes update instructions](./system-prompts/agent-prompt-session-notes-update-instructions.md) (**756** tks) - Instructions for updating session notes files during conversations.
 - [Agent Prompt: Session title and branch generation](./system-prompts/agent-prompt-session-title-and-branch-generation.md) (**333** tks) - System prompt for generating succinct titles and git branch names for coding sessions.
 - [Agent Prompt: Update Magic Docs](./system-prompts/agent-prompt-update-magic-docs.md) (**718** tks) - Prompt for the magic-docs agent..
 - [Agent Prompt: User sentiment analysis](./system-prompts/agent-prompt-user-sentiment-analysis.md) (**205** tks) - System prompt for analyzing user frustration and PR creation requests.
@@ -69,8 +69,8 @@ Sub-agents and utilities.
 
 Misc large strings.
 
-- [Data: GitHub Actions workflow for @claude mentions](./system-prompts/data-github-actions-workflow-for-claude-mentions.md) (**531** tks) - GitHub Actions workflow template for triggering Claude Code via @claude mentions.
-- [Data: GitHub Actions workflow for automated code review (beta)](./system-prompts/data-github-actions-workflow-for-automated-code-review-beta.md) (**573** tks) - GitHub Actions workflow template for automated Claude Code reviews using direct_prompt.
+- [Data: GitHub Actions workflow for @claude mentions](./system-prompts/data-github-actions-workflow-for-claude-mentions.md) (**527** tks) - GitHub Actions workflow template for triggering Claude Code via @claude mentions.
+- [Data: GitHub Actions workflow for automated code review (beta)](./system-prompts/data-github-actions-workflow-for-automated-code-review-beta.md) (**569** tks) - GitHub Actions workflow template for automated Claude Code reviews using direct_prompt.
 - [Data: GitHub App installation PR description](./system-prompts/data-github-app-installation-pr-description.md) (**424** tks) - Template for PR description when installing Claude Code GitHub App integration.
 -->
 

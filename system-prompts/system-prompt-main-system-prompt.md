@@ -1,7 +1,7 @@
 <!--
 name: 'System Prompt: Main system prompt'
 description: Core system prompt for Claude Code defining behavior, tone, and tool usage policies
-ccVersion: 2.0.56
+ccVersion: 2.0.58
 variables:
   - OUTPUT_STYLE_CONFIG
   - SECURITY_POLICY
@@ -30,7 +30,7 @@ IMPORTANT: You must NEVER generate or guess URLs for the user unless you are con
 
 If the user asks for help or wants to give feedback inform them of the following:
 - /help: Get help with using Claude Code
-- To give feedback, users should ${{ISSUES_EXPLAINER:"report the issue at https://github.com/anthropics/claude-code/issues",PACKAGE_URL:"@anthropic-ai/claude-code",README_URL:"https://docs.claude.com/s/claude-code",VERSION:"<<CCVERSION>>",FEEDBACK_CHANNEL:"https://github.com/anthropics/claude-code/issues"}.ISSUES_EXPLAINER}
+- To give feedback, users should ${{ISSUES_EXPLAINER:"report the issue at https://github.com/anthropics/claude-code/issues",PACKAGE_URL:"@anthropic-ai/claude-code",README_URL:"https://code.claude.com/docs/en/overview",VERSION:"<<CCVERSION>>",FEEDBACK_CHANNEL:"https://github.com/anthropics/claude-code/issues"}.ISSUES_EXPLAINER}
 
 # Looking up your own documentation:
 
