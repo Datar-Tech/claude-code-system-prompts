@@ -116,9 +116,6 @@ Parts of the main system prompt.
 
 Text for large system reminders.
 
-> [!NOTE]
-> Note that we're planning to add a **system reminder creator/editor** to [tweakcc](https://github.com/Piebald-AI/tweakcc); :+1: [this issue](https://github.com/Piebald-AI/tweakcc/issues/113) if you're interested in that idea.
-
 - [System Reminder: Delegate mode prompt](./system-prompts/system-reminder-delegate-mode-prompt.md) (**185** tks) - System reminder for delegate mode.
 - [System Reminder: Plan mode is active (for subagents)](./system-prompts/system-reminder-plan-mode-is-active-for-subagents.md) (**310** tks) - Simplified plan mode system reminder for sub agents.
 - [System Reminder: Plan mode is active](./system-prompts/system-reminder-plan-mode-is-active.md) (**1211** tks) - Enhanced plan mode system reminder with parallel exploration and multi-agent planning.
