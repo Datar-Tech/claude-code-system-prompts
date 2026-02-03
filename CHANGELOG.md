@@ -8,23 +8,22 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 _+3,152 tokens_
 
-**NEW:** System Prompt: Executing actions with care - Instructions for executing actions carefully
-**NEW:** System Prompt: Insights at a glance summary - Generates a concise 4-part summary (what's working, hindrances, quick wins, ambitious workflows) for the insights report
-**NEW:** System Prompt: Insights friction analysis - Analyzes aggregated usage data to identify friction patterns and categorize recurring issues
-**NEW:** System Prompt: Insights on the horizon - Identifies ambitious future workflows and opportunities for autonomous AI-assisted development
-**NEW:** System Prompt: Insights session facets extraction - Extracts structured facets (goal categories, satisfaction, friction) from a single Claude Code session transcript
-**NEW:** System Prompt: Insights suggestions - Generates actionable suggestions including CLAUDE.md additions, features to try, and usage patterns
-**NEW:** System Prompt: Parallel tool call note - System prompt for telling Claude to use parallel tool calls
-**NEW:** Tool Description: Sleep - Tool for waiting/sleeping with early wake capability on user input
-System Prompt: Accessing past sessions - Added tip to truncate search results to 64 characters per match to keep context manageable
-System Prompt: Hooks Configuration - Significantly restructured hook response format with new fields including `suppressOutput`, `decision`, `reason`, and `hookSpecificOutput` with event-specific parameters
-System Reminder: Plan mode is active (5-phase) - Added guidance to actively search for and reuse existing functions, utilities, and patterns, with emphasis on including references to found utilities in the plan
-System Reminder: Plan mode is active (iterative) - Added similar guidance about reusing existing code and including references to found utilities in the plan
-Tool Description: ReadFile - Added requirement to use `pages` parameter for large PDFs (more than 10 pages), with maximum 20 pages per request
-Tool Description: SendMessageTool - Restructured message types (removed nested "request" and "response" types), added required `summary` field for message and broadcast types, flattened protocol to use specific types like `shutdown_request`, `shutdown_response`, `plan_approval_response`
-Tool Description: Task - Restructured preamble section
-Tool Description: TeammateTool - Clarified that teammates go idle after every turn (not just when done), explained that idle teammates can still receive messages and will wake up to process them, and clarified that idle notifications are automatic and normal
-
+- **NEW:** System Prompt: Executing actions with care - Instructions for executing actions carefully
+- **NEW:** System Prompt: Insights at a glance summary - Generates a concise 4-part summary (what's working, hindrances, quick wins, ambitious workflows) for the insights report
+- **NEW:** System Prompt: Insights friction analysis - Analyzes aggregated usage data to identify friction patterns and categorize recurring issues
+- **NEW:** System Prompt: Insights on the horizon - Identifies ambitious future workflows and opportunities for autonomous AI-assisted development
+- **NEW:** System Prompt: Insights session facets extraction - Extracts structured facets (goal categories, satisfaction, friction) from a single Claude Code session transcript
+- **NEW:** System Prompt: Insights suggestions - Generates actionable suggestions including CLAUDE.md additions, features to try, and usage patterns
+- **NEW:** System Prompt: Parallel tool call note - System prompt for telling Claude to use parallel tool calls
+- **NEW:** Tool Description: Sleep - Tool for waiting/sleeping with early wake capability on user input
+- System Prompt: Accessing past sessions - Added tip to truncate search results to 64 characters per match to keep context manageable
+- System Prompt: Hooks Configuration - Significantly restructured hook response format with new fields including `suppressOutput`, `decision`, `reason`, and `hookSpecificOutput` with event-specific parameters
+- System Reminder: Plan mode is active (5-phase) - Added guidance to actively search for and reuse existing functions, utilities, and patterns, with emphasis on including references to found utilities in the plan
+- System Reminder: Plan mode is active (iterative) - Added similar guidance about reusing existing code and including references to found utilities in the plan
+- Tool Description: ReadFile - Added requirement to use `pages` parameter for large PDFs (more than 10 pages), with maximum 20 pages per request
+- Tool Description: SendMessageTool - Restructured message types (removed nested "request" and "response" types), added required `summary` field for message and broadcast types, flattened protocol to use specific types like `shutdown_request`, `shutdown_response`, `plan_approval_response`
+- Tool Description: Task - Restructured preamble section
+- Tool Description: TeammateTool - Clarified that teammates go idle after every turn (not just when done), explained that idle teammates can still receive messages and will wake up to process them, and clarified that idle notifications are automatic and normal
 
 #### [2.1.29](https://github.com/Piebald-AI/claude-code-system-prompts/commit/e2d243c)
 
