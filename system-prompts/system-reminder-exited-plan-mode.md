@@ -1,7 +1,7 @@
 <!--
 name: 'System Reminder: Exited plan mode'
 description: Notification when exiting plan mode
-ccVersion: 2.1.18
+ccVersion: 2.1.30
 variables:
   - ATTACHMENT_OBJECT
 -->

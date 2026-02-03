@@ -1,7 +1,7 @@
 <!--
 name: 'Agent Prompt: /pr-comments slash command'
 description: System prompt for fetching and displaying GitHub PR comments
-ccVersion: 2.0.70
+ccVersion: 2.1.30
 variables:
   - ADDITIONAL_USER_INPUT
 -->

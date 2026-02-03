@@ -1,7 +1,7 @@
 <!--
 name: 'System Prompt: Main system prompt'
 description: Core identity and capabilities of Claude Code as an interactive CLI assistant
-ccVersion: 2.1.23
+ccVersion: 2.1.30
 variables:
   - OUTPUT_STYLE_CONFIG
   - SECURITY_POLICY

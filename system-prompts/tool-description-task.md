@@ -1,10 +1,10 @@
 <!--
 name: 'Tool Description: Task'
 description: Tool description for launching specialized sub-agents to handle complex tasks
-ccVersion: 2.1.15
+ccVersion: 2.1.30
 variables:
+  - TASK_TOOL_PREAMBLE
   - TASK_TOOL
-  - AGENT_TYPE_REGISTRY_STRING
   - READ_TOOL
   - GLOB_TOOL
   - GET_SUBSCRIPTION_TYPE_FN
@@ -15,14 +15,7 @@ variables:
   - TASK_TOOL_OBJECT
   - WRITE_TOOL
 -->
-Launch a new agent to handle complex, multi-step tasks autonomously. 
-
-The ${TASK_TOOL} tool launches specialized agents (subprocesses) that autonomously handle complex tasks. Each agent type has specific capabilities and tools available to it.
-
-Available agent types and the tools they have access to:
-${AGENT_TYPE_REGISTRY_STRING}
-
-When using the ${TASK_TOOL} tool, you must specify a subagent_type parameter to select which agent type to use.
+${TASK_TOOL_PREAMBLE}
 
 When NOT to use the ${TASK_TOOL} tool:
 - If you want to read a specific file path, use the ${READ_TOOL} or ${GLOB_TOOL} tool instead of the ${TASK_TOOL} tool, to find the match more quickly

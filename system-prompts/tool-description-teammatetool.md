@@ -1,7 +1,7 @@
 <!--
 name: 'Tool Description: TeammateTool'
 description: Tool for managing teams and coordinating teammates in a swarm
-ccVersion: 2.1.23
+ccVersion: 2.1.30
 -->
 
 # TeammateTool
@@ -124,17 +124,13 @@ Use this when all teammates have finished their work and you want to clean up th
 3. **Spawn teammates** using the Task tool with \`team_name\` and \`name\` parameters to create teammates that join the team
 4. **Assign tasks** using TaskUpdate with \`owner\` to give tasks to idle teammates
 5. **Teammates work on assigned tasks** and mark them completed via TaskUpdate
-6. **Teammates notify when idle** - when a teammate stops, they automatically send an idle notification to the team leader via mailbox
+6. **Teammates go idle between turns** - after each turn, teammates automatically go idle and send a notification. This is normal—idle teammates can still receive messages and will wake up to process them
 
 ## Task Ownership
 
 Tasks are assigned using TaskUpdate with the \`owner\` parameter. Any agent can set or change task ownership via TaskUpdate.
 
 ## Automatic Message Delivery
-Teammates automatically send an idle notification to the team leader when they finish their work. The notification includes:
-- Agent ID of the teammate
-- Timestamp
-- Optional task completion status
 
 **IMPORTANT**: Messages from teammates are automatically delivered to you. You do NOT need to manually check your inbox.
 
@@ -147,6 +143,14 @@ When you spawn teammates:
 Messages will be delivered automatically.
 
 When reporting on teammate messages, you do NOT need to quote the original message—it's already rendered to the user.
+
+## Teammate Idle State
+
+Teammates go idle after every turn—this is completely normal and expected. A teammate going idle immediately after sending you a message does NOT mean they are done or unavailable. Idle simply means they are waiting for input.
+
+- **Idle teammates can receive messages.** Sending a message to an idle teammate wakes them up and they will process it normally.
+- **Idle notifications are automatic.** The system sends an idle notification whenever a teammate's turn ends. You do not need to react to idle notifications unless you want to assign new work or send a follow-up message.
+- **Do not treat idle as an error.** A teammate sending a message and then going idle is the normal flow—they sent their message and are now waiting for a response.
 
 ## Environment Variables
 

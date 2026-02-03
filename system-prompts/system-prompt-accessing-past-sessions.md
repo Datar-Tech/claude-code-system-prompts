@@ -1,7 +1,7 @@
 <!--
 name: 'System Prompt: Accessing past sessions'
 description: Instructions for searching past session data including memory summaries and transcript logs
-ccVersion: 2.1.21
+ccVersion: 2.1.30
 variables:
   - GREP_TOOL_NAME
   - GET_SESSIONS_PATH_FN
@@ -25,3 +25,5 @@ ${GREP_TOOL_NAME} with pattern="<search term>" path="${GET_SESSIONS_PATH_FN(GET_
 \`\`\`
 
 Search for error messages, file paths, function names, commands, or keywords related to the current task.
+
+**Tip**: Truncate search results to 64 characters per match to keep context manageable.

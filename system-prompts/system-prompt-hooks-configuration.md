@@ -1,7 +1,7 @@
 <!--
 name: 'System Prompt: Hooks Configuration'
 description: System prompt for hooks configuration.  Used for above Claude Code config skill.
-ccVersion: 2.1.9
+ccVersion: 2.1.30
 -->
 ## Hooks Configuration
 
@@ -82,8 +82,13 @@ Hooks can return JSON to control behavior:
   "systemMessage": "Warning shown to user in UI",
   "continue": false,
   "stopReason": "Message shown when blocking",
-  "additionalContext": "Context injected back to model",
-  "decision": "approve" | "block"
+  "suppressOutput": false,
+  "decision": "block",
+  "reason": "Explanation for decision",
+  "hookSpecificOutput": {
+    "hookEventName": "PostToolUse",
+    "additionalContext": "Context injected back to model"
+  }
 }
 \`\`\`
 
@@ -91,8 +96,14 @@ Hooks can return JSON to control behavior:
 - \`systemMessage\` - Display a message to the user (all hooks)
 - \`continue\` - Set to \`false\` to block/stop (default: true)
 - \`stopReason\` - Message shown when \`continue\` is false
-- \`additionalContext\` - Text injected into model context (event-specific)
-- \`decision\` - "approve" or "block" for PreToolUse hooks
+- \`suppressOutput\` - Hide stdout from transcript (default: false)
+- \`decision\` - "block" for PostToolUse/Stop/UserPromptSubmit hooks (deprecated for PreToolUse, use hookSpecificOutput.permissionDecision instead)
+- \`reason\` - Explanation for decision
+- \`hookSpecificOutput\` - Event-specific output (must include \`hookEventName\`):
+  - \`additionalContext\` - Text injected into model context
+  - \`permissionDecision\` - "allow", "deny", or "ask" (PreToolUse only)
+  - \`permissionDecisionReason\` - Reason for the permission decision (PreToolUse only)
+  - \`updatedInput\` - Modified tool input (PreToolUse only)
 
 ### Common Patterns
 

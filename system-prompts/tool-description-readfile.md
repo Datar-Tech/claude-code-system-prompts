@@ -1,7 +1,7 @@
 <!--
 name: 'Tool Description: ReadFile'
 description: Tool description for reading files
-ccVersion: 2.0.14
+ccVersion: 2.1.30
 variables:
   - DEFAULT_READ_LINES
   - MAX_LINE_LENGTH
@@ -18,7 +18,7 @@ Usage:
 - Any lines longer than ${MAX_LINE_LENGTH} characters will be truncated
 - Results are returned using cat -n format, with line numbers starting at 1
 - This tool allows Claude Code to read images (eg PNG, JPG, etc). When reading an image file the contents are presented visually as Claude Code is a multimodal LLM.${CAN_READ_PDF_FILES()?`
-- This tool can read PDF files (.pdf). PDFs are processed page by page, extracting both text and visual content for analysis.`:""}
+- This tool can read PDF files (.pdf). For large PDFs (more than 10 pages), you MUST provide the pages parameter to read specific page ranges (e.g., pages: "1-5"). Reading a large PDF without the pages parameter will fail. Maximum 20 pages per request.`:""}
 - This tool can read Jupyter notebooks (.ipynb files) and returns all cells with their outputs, combining code, text, and visualizations.
 - This tool can only read files, not directories. To read a directory, use an ls command via the ${BASH_TOOL_NAME} tool.
 - You can call multiple tools in a single response. It is always better to speculatively read multiple potentially useful files in parallel.

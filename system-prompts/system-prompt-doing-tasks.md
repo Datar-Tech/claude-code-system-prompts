@@ -1,7 +1,7 @@
 <!--
 name: 'System Prompt: Doing tasks'
 description: Instructions for performing software engineering tasks
-ccVersion: 2.1.20
+ccVersion: 2.1.30
 variables:
   - TOOL_USAGE_HINTS_ARRAY
 -->

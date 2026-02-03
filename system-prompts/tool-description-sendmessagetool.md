@@ -1,7 +1,7 @@
 <!--
 name: 'Tool Description: SendMessageTool'
 description: Tool for sending messages to teammates and handling protocol requests/responses in a swarm
-ccVersion: 2.1.20
+ccVersion: 2.1.30
 -->
 
 # SendMessageTool
@@ -20,12 +20,14 @@ Send a message to a **single specific teammate**. You MUST specify the recipient
 {
   "type": "message",
   "recipient": "researcher",
-  "content": "Your message here"
+  "content": "Your message here",
+  "summary": "Brief status update on auth module"
 }
 \`\`\`
 
 - **recipient**: The name of the teammate to message (required)
 - **content**: The message text (required)
+- **summary**: A 5-10 word summary shown as preview in the UI (required)
 
 ### type: "broadcast" - Send Message to ALL Teammates (USE SPARINGLY)
 
@@ -39,11 +41,13 @@ Send the **same message to everyone** on the team at once.
 \`\`\`
 {
   "type": "broadcast",
-  "content": "Message to send to all teammates"
+  "content": "Message to send to all teammates",
+  "summary": "Critical blocking issue found"
 }
 \`\`\`
 
 - **content**: The message content to broadcast (required)
+- **summary**: A 5-10 word summary shown as preview in the UI (required)
 
 **CRITICAL: Use broadcast only when absolutely necessary.** Valid use cases:
 - Critical issues requiring immediate team-wide attention (e.g., "stop all work, blocking bug found")
@@ -56,16 +60,13 @@ Send the **same message to everyone** on the team at once.
 - Sharing findings relevant to only some teammates
 - Any message that doesn't require everyone's attention
 
-### type: "request" - Send a Protocol Request
-
-#### subtype: "shutdown" - Request a Teammate to Shut Down
+### type: "shutdown_request" - Request a Teammate to Shut Down
 
 Use this to ask a teammate to gracefully shut down:
 
 \`\`\`
 {
-  "type": "request",
-  "subtype": "shutdown",
+  "type": "shutdown_request",
   "recipient": "researcher",
   "content": "Task complete, wrapping up the session"
 }
@@ -73,11 +74,7 @@ Use this to ask a teammate to gracefully shut down:
 
 The teammate will receive a shutdown request and can either approve (exit) or reject (continue working).
 
-#### subtype: "plan_approval" - Approve or Reject a Teammate's Plan
-
-Not used as a request. Plan approval/rejection is done via "response" type.
-
-### type: "response" - Respond to a Protocol Request
+### type: "shutdown_response" - Respond to a Shutdown Request
 
 #### Approve Shutdown
 
@@ -85,8 +82,7 @@ When you receive a shutdown request as a JSON message with \`type: "shutdown_req
 
 \`\`\`
 {
-  "type": "response",
-  "subtype": "shutdown",
+  "type": "shutdown_response",
   "request_id": "abc-123",
   "approve": true
 }
@@ -100,8 +96,7 @@ This will send confirmation to the leader and terminate your process.
 
 \`\`\`
 {
-  "type": "response",
-  "subtype": "shutdown",
+  "type": "shutdown_response",
   "request_id": "abc-123",
   "approve": false,
   "content": "Still working on task #3, need 5 more minutes"
@@ -110,14 +105,15 @@ This will send confirmation to the leader and terminate your process.
 
 The leader will receive your rejection with the reason.
 
+### type: "plan_approval_response" - Approve or Reject a Teammate's Plan
+
 #### Approve Plan
 
 When a teammate with \`plan_mode_required\` calls ExitPlanMode, they send you a plan approval request as a JSON message with \`type: "plan_approval_request"\`. Use this to approve their plan:
 
 \`\`\`
 {
-  "type": "response",
-  "subtype": "plan_approval",
+  "type": "plan_approval_response",
   "request_id": "abc-123",
   "recipient": "researcher",
   "approve": true
@@ -130,8 +126,7 @@ After approval, the teammate will automatically exit plan mode and can proceed w
 
 \`\`\`
 {
-  "type": "response",
-  "subtype": "plan_approval",
+  "type": "plan_approval_response",
   "request_id": "abc-123",
   "recipient": "researcher",
   "approve": false,

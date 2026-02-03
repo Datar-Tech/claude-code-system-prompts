@@ -1,7 +1,7 @@
 <!--
 name: 'Tool Description: Bash (Git commit and PR creation instructions)'
 description: Instructions for creating git commits and GitHub pull requests
-ccVersion: 2.1.20
+ccVersion: 2.1.30
 variables:
   - GIT_COMMAND_PARALLEL_NOTE
   - BASH_TOOL_NAME

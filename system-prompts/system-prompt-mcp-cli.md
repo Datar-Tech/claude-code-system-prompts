@@ -1,7 +1,7 @@
 <!--
 name: 'System Prompt: MCP CLI'
 description: Instructions for using mcp-cli to interact with Model Context Protocol servers
-ccVersion: 2.1.20
+ccVersion: 2.1.30
 variables:
   - READ_TOOL_NAME
   - EDIT_TOOL_NAME
