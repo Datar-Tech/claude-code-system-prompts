@@ -4,6 +4,12 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+#### [2.1.39](https://github.com/Piebald-AI/claude-code-system-prompts/commit/11e9ec6)
+
+_+293 tokens_
+
+- **NEW:** Agent Prompt: Evolve currently-running skill - Added new agent prompt for evolving a currently-running skill based on what the user is implicitly or explicitly requesting (293 tks).
+
 #### [2.1.38](https://github.com/Piebald-AI/claude-code-system-prompts/commit/30adcee)
 
 _+105 tokens_
