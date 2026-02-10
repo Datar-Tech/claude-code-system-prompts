@@ -4,7 +4,7 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
-#### [2.1.38](https://github.com/Piebald-AI/claude-code-system-prompts/commit/a547768)
+#### [2.1.38](https://github.com/Piebald-AI/claude-code-system-prompts/commit/30adcee)
 
 _+105 tokens_
 
@@ -43,7 +43,7 @@ _-1,086 tokens_
 - Tool Description: Task - Removed `AGENT_TEAM_CHECK` variable and conditional note about Agent Teams not being available on certain plans; reduced from 1340 to 1215 tokens
 - Tool Description: TeammateTool - Renamed tool heading from "TeammateTool" to "TeamCreate"; removed `spawnTeam` operation label and `cleanup` operation (now separate TeamDelete tool); added explicit file paths for created team and task list resources; added note about automatic message delivery; updated workflow to reference TeamCreate; reduced from 1790 to 1642 tokens
 
-# [2.1.32](https://github.com/Piebald-AI/claude-code-system-prompts/commit/90253de)
+# [2.1.32](https://github.com/Piebald-AI/claude-code-system-prompts/commit/a362f28)
 
 _+2,323 tokens_
 
@@ -71,7 +71,7 @@ _+693 tokens_
 - Tool Description: ToolSearch - Refactored: moved extended content to separate `ToolSearch extended` prompt; simplified base description now references `<available-deferred-tools>` messages and conditionally includes extended content via identifier
 
 
-# [2.1.30](https://github.com/Piebald-AI/claude-code-system-prompts/commit/688d25c)
+# [2.1.30](https://github.com/Piebald-AI/claude-code-system-prompts/commit/87f225d)
 
 _+3,152 tokens_
 
