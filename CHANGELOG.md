@@ -4,6 +4,26 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+#### [2.1.47](https://github.com/Piebald-AI/claude-code-system-prompts/commit/f58cba9)
+
+_+34,752 tokens_
+
+- **NEW:** Data: Agent SDK patterns — Python (2080 tks), Agent SDK patterns — TypeScript (1067 tks), Agent SDK reference — Python (1718 tks) - SDK pattern guides and reference for Python and TypeScript Agent SDKs.
+- **NEW:** Data: Claude API reference — C# (458 tks), Go (629 tks), Java (1073 tks), PHP (410 tks), Python (2905 tks), Ruby (603 tks), TypeScript (2024 tks) - SDK references for all supported Claude API client languages.
+- **NEW:** Data: Claude model catalog (1349 tks) - Catalog of current and legacy Claude models with IDs, aliases, context windows, and pricing.
+- **NEW:** Data: Files API reference — Python (1303 tks), TypeScript (798 tks) - References for the Files API covering upload, listing, deletion, and message usage.
+- **NEW:** Data: HTTP error codes reference (1460 tks) - Reference for Claude API HTTP error codes with common causes and handling strategies.
+- **NEW:** Data: Live documentation sources (2337 tks) - WebFetch URLs for fetching current Claude API and Agent SDK documentation from official sources.
+- **NEW:** Data: Message Batches API reference — Python (1481 tks) - Batches API reference including batch creation, status polling, and result retrieval.
+- **NEW:** Data: Streaming reference — Python (1534 tks), TypeScript (1553 tks) - Streaming references covering sync/async streaming and content type handling.
+- **NEW:** Data: Tool use concepts (2820 tks) - Conceptual foundations of tool use including definitions, tool choice, and best practices.
+- **NEW:** Data: Tool use reference — Python (4261 tks), TypeScript (3294 tks) - Tool use references covering tool runner, agentic loops, code execution, and structured outputs.
+- **REMOVED:** Agent Prompt: Prompt Suggestion Generator (Coordinator) - Removed the coordinator-mode prompt suggestion generator that predicted what a team supervisor would type next (283 tks).
+- **REMOVED:** System Reminder: Delegate mode prompt - Removed the delegate mode system reminder that restricted tool usage to team coordination tools (185 tks).
+- **REMOVED:** System Reminder: Exited delegate mode - Removed the notification shown when exiting delegate mode (50 tks).
+- Agent Prompt: Status line setup - Added `added_dirs` field to the workspace schema for directories added via `/add-dir` (1482 → 1502 tks).
+- Tool Description: AskUserQuestion - Added `EXIT_PLAN_MODE_TOOL_NAME` variable; expanded plan mode guidance to warn against referencing "the plan" in questions, since users cannot see the plan until `ExitPlanMode` is called (194 → 287 tks).
+
 #### [2.1.45](https://github.com/Piebald-AI/claude-code-system-prompts/commit/36d2856)
 
 _+276 tokens_
