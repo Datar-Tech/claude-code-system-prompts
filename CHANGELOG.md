@@ -4,6 +4,14 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+#### [2.1.50](https://github.com/Piebald-AI/claude-code-system-prompts/commit/5fa66df)
+
+_+110 tokens_
+
+- Tool Description: EnterWorktree - Generalized from git-only to support VCS-agnostic isolation via `WorktreeCreate`/`WorktreeRemove` hooks; requirements now allow non-git repos with hooks configured (237 → 284 tks).
+- Tool Description: ReadFile - Replaced hardcoded "cat -n format" line-number note with a `CONDITIONAL_READ_LINES` variable (476 → 468 tks).
+- Tool Description: Task - Added `isolation: "worktree"` option to run agents in temporary git worktrees with automatic cleanup (1228 → 1299 tks).
+
 #### [2.1.49](https://github.com/Piebald-AI/claude-code-system-prompts/commit/8da43fb)
 
 <sub>_No changes to the system prompts in v2.1.49._</sub>
